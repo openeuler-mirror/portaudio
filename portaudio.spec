@@ -1,13 +1,13 @@
 Name:           portaudio
 Version:        19
-Release:        29
+Release:        30
 Summary:        Free, cross platform, open-source, audio I/O library
 License:        MIT
 URL:            http://www.portaudio.com/
 Source0:        http://www.portaudio.com/archives/pa_stable_v19_20140130.tgz
 Patch0000:      portaudio-doxynodate.patch
 Patch0001:      portaudio-pkgconfig-alsa.patch
-BuildRequires:  doxygen alsa-lib-devel jack-audio-connection-kit-devel autoconf automake libtool
+BuildRequires:  doxygen alsa-lib-devel jack-audio-connection-kit-devel autoconf automake libtool gcc-c++
 
 %description
 PortAudio is a portable audio I/O library that uses a callback
@@ -55,5 +55,8 @@ doxygen
 %exclude %{_libdir}/*.la
 
 %changelog
+* Mon May 31 2021 huanghaitao <huanghaitao8@huawei.com> - 19-30
+- Completing build dependencies
+
 * Thu Nov 14 2019 wangye<wangye54@huawei.com> - 19-29
 - Package init
