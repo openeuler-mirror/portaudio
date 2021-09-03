@@ -1,6 +1,6 @@
 Name:           portaudio
 Version:        19
-Release:        29
+Release:        30
 Summary:        Free, cross platform, open-source, audio I/O library
 License:        MIT
 URL:            http://www.portaudio.com/
@@ -55,5 +55,8 @@ doxygen
 %exclude %{_libdir}/*.la
 
 %changelog
+* Fri Sep 03 2021 wangyue<wangyue92@huawei.com> - 19-30
+- release number add 1
+
 * Thu Nov 14 2019 wangye<wangye54@huawei.com> - 19-29
 - Package init
