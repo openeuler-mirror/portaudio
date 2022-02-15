@@ -1,6 +1,6 @@
 Name:           portaudio
 Version:        19
-Release:        30
+Release:        31
 Summary:        Free, cross platform, open-source, audio I/O library
 License:        MIT
 URL:            http://www.portaudio.com/
@@ -24,6 +24,8 @@ portaudio library.
 
 %prep
 %autosetup -n %{name} -p1
+autoreconf -i -f
+#with autoconf-2.71 we need to run this twice for things to work
 autoreconf -i -f
 
 %build
@@ -55,6 +57,9 @@ doxygen
 %exclude %{_libdir}/*.la
 
 %changelog
+* Tue Feb 15 2022 chenchen <chen_aka_jan@163.com> - 19-31
+- fix FTBFS with upcoming autoconf-2.71 
+
 * Mon May 31 2021 huanghaitao <huanghaitao8@huawei.com> - 19-30
 - Completing build dependencies
 
